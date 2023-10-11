@@ -22,11 +22,11 @@ def projects():
 def about():
     return "Under Construction"
 
-@app.route('/api/test', methods=['GET'])
+@app.route('/api-test/', methods=['GET'])
 def get_data():
     data = {"message": "Testing API with Flask"}
     return jsonify(data)
 
 if __name__ == '__main__':
-    app.run(port=3000, debug=True)
+    app.run(port=8000, debug=True)
 
