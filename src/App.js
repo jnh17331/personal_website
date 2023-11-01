@@ -1,27 +1,31 @@
-import './App.css';
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import './App.scss';
+//import axios from 'axios';
+//import React, { useEffect, useState } from 'react';
+//import ReactDOM from 'react-dom';
+import Layout from './components/Layout'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [data, setData] = useState({});
+  //const [data, setData] = useState({});
 
-  useEffect(() => {
-    fetch("http://localhost:8000/api-test/")
-    .then(
-      res => res.json()
-    )
-    .then(
-      data => {
-        setData(data)
-        console.log(data)
-      });
+  // useEffect(() => {
+  //   fetch("http://localhost:8000/api-test/")
+  //   .then(
+  //     res => res.json()
+  //   )
+  //   .then(
+  //     data => {
+  //       setData(data)
+  //       console.log(data)
+  //     });
 
-  }, []);
+  // }, []);
   return (
-    <div>
-      <p>{data.message}</p>
-    </div>
+    <>
+    <Routes>
+      <Route path="/" element={<Layout />} />
+    </Routes>
+    </>
   );
 }
 

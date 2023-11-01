@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+.container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 100vh;
+}
+
+.nav-bar {
+    background: #181818;
+    width: 100vw;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    
+}
+
+.profile-image {
+    max-height: 300px;
+    height: auto;
+    width: auto;
+}
