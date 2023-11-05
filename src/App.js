@@ -6,6 +6,8 @@ import Layout from './components/Layout'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
+  // Example of using data from our backend
+  
   //const [data, setData] = useState({});
 
   // useEffect(() => {
