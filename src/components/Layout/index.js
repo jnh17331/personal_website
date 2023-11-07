@@ -4,7 +4,7 @@ import Footer from '../Footer'
 
 const Layout = () => {
     return(
-    <div className='bg'>
+    <div className='App'>
         <><Navbar /></>
         <><Footer /></>
     </div>

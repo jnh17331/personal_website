@@ -10,4 +10,35 @@ body {
     height: 75px;
     position: absolute;
     bottom: 0;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            img {
+                margin: -25px 15px;
+                width: 35px;
+                height: auto;
+                border: 1px solid #000;
+                border-radius: 50%;
+                background: rgba(0,0,0,0);
+
+            }
+
+            &:hover {
+                filter: brightness(80%); // Add hover effect (adjust as needed)
+              }
+        }
+    }
 }
+
