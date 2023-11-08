@@ -1,6 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
 import './index.scss'
-import pfp from '../../assets/images/pfp.JPG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faEnvelope, faSitemap, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import React, { useState, useEffect } from 'react';
