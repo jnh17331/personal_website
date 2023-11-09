@@ -1,0 +1,49 @@
+.page {
+    
+    position: absolute;
+    top: 0;
+    padding: 20px;    
+}
+
+.introduction {
+    position: absolute;
+    top: 275px;
+    left: 200px;
+    font-family: Geneva;
+    font-size: 50px;
+    color: #6495ed;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hello {
+    
+    font-family: 'Bowlby', sans-serif;
+    position: absolute;
+    top: -50px;
+    left: -5px;
+    font-size: 100px;
+    animation: block 3s ease-in forwards;
+
+    
+}
+
+@keyframes block {
+    0% {
+      transform: translate(-110%, 0);
+    }
+    45%, 55% {
+      transform: translate(0, 0);
+    }
+  }
+
+.picture {
+    position: absolute;
+    top: -150px;
+    left: 1200px;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}

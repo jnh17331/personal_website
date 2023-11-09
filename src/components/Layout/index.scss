@@ -4,37 +4,3 @@
     flex-direction: column;
 }
 
-.page {
-    position: absolute;
-    top: 0;
-    padding: 20px;    
-}
-
-.introduction {
-    position: absolute;
-    top: 275px;
-    left: 200px;
-    font-family: Geneva;
-    font-size: 50px;
-    color: #6495ed;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.hello {
-    position: absolute;
-    top: -50px;
-    left: 0px;
-    font-size: 100px;
-}
-
-.picture {
-    position: absolute;
-    top: -150px;
-    left: 1200px;
-    height: 350px;
-    width: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-
-}

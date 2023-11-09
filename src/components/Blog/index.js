@@ -1,7 +1,7 @@
 import './index.scss'
 
 
-const Contact = () => {
+const Blog = () => {
 
     return (
         "TESTING"
@@ -9,4 +9,4 @@ const Contact = () => {
 
 }
 
-export default Contact;
+export default Blog;
