@@ -12,9 +12,6 @@ const Home = () => {
                     <br></br>
                     <img  className='picture' src={pfp} alt='Me'/>
                 </div>
-                <div className='projects'>
-                    <span>UNDER CONSTRUCTION</span>
-                </div>
             </div>
     );
 
