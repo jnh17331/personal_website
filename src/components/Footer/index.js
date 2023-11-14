@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -11,7 +11,7 @@ import spotifylogo from '../../assets/images/spotifylogo.png'
 const Footer = () => {
     return (
         <div className='container'>
-            <div className='footer'>
+            <footer className='footer'>
                 <div className='footer-container'>
                     <ul>
                         <li>
@@ -21,7 +21,7 @@ const Footer = () => {
                             <a target="_blank" rel="noreferrer" href='https://github.com/jnh17331'>
                                 <img src={githublogo} alt="Github Logo"/>
                             </a>
-                            <NavLink exact="true" className='contact-link' to='/contact'>
+                            <NavLink className='contact-link' to='/contact'>
                                 <FontAwesomeIcon icon={faEnvelope}/>
                             </NavLink>
                             <a target="_blank" rel="noreferrer" href='https://www.instagram.com/_jesse_heaton_/'>
@@ -33,7 +33,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </footer>
         </div>
     );
 };

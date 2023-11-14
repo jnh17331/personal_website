@@ -31,21 +31,23 @@ const Navbar = () => {
                         {/*<img src={pfp} alt='pfp' className='profile-image' />*/}
                     </Link>
                     <nav>
-                        <NavLink exact="true" activeclassname='active' className='about-link' to='/about'>
-                            <FontAwesomeIcon icon={faUser} color='1f1f1f' />
-                        </NavLink>
-                        <NavLink exact="true" activeclassname='active' className='projects' to='/projects'>
-                            <FontAwesomeIcon icon={faSitemap} color='1f1f1f' />
-                        </NavLink>
-                        <NavLink exact="true" activeclassname='active' className='home' to='/'>
-                            <FontAwesomeIcon icon={faHome} color='1f1f1f' />
-                        </NavLink>
-                        <NavLink exact="true" activeclassname='active' className='blog' to='/blog'>
-                            <FontAwesomeIcon icon={faGlobe} color='1f1f1f' />
-                        </NavLink>
-                        <NavLink exact="true" activeclassname='active' className='contact-link' to='/contact'>
-                            <FontAwesomeIcon icon={faEnvelope} color='1f1f1f' />
-                        </NavLink>
+                        <ul>
+                            <NavLink exact="true" activeclassname='active' className='about-link' to='/about'>
+                                <FontAwesomeIcon icon={faUser} color='1f1f1f' />
+                            </NavLink>
+                            <NavLink exact="true" activeclassname='active' className='projects' to='/projects'>
+                                <FontAwesomeIcon icon={faSitemap} color='1f1f1f' />
+                            </NavLink>
+                            <NavLink exact="true" activeclassname='active' className='home' to='/'>
+                                <FontAwesomeIcon icon={faHome} color='1f1f1f' />
+                            </NavLink>
+                            <NavLink exact="true" activeclassname='active' className='blog' to='/blog'>
+                                <FontAwesomeIcon icon={faGlobe} color='1f1f1f' />
+                            </NavLink>
+                            <NavLink exact="true" activeclassname='active' className='contact-link' to='/contact'>
+                                <FontAwesomeIcon icon={faEnvelope} color='1f1f1f' />
+                            </NavLink>
+                        </ul>
                     </nav>
                 </div>
             </div>
