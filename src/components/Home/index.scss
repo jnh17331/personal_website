@@ -1,107 +1,111 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
 .page {
-    height: 100vh;
-    padding: 0;
-    position: absolute;
-    overflow: auto;    
+  height: 100vh;
+  padding: 0;
+  position: absolute;
+  overflow: auto;    
 }
 
 .introduction {
-    font-family: Geneva;
-    font-size: 6vw;
-    color: #6495ed;
-    position: absolute;
-    display: grid;
-    margin: 0 .35em;
+  font-family: Geneva;
+  font-size: 6vw;
+  color: #6495ed;
+  position: absolute;
+  display: grid;
+  margin: 3em .35em;
 
-    h1 {
-      position: absolute;
-      animation: block 3s ease-in forwards;
-      display: block;
-      top: -5em;
-    }
-    
-    p {
-      position: inherit;
-      width: 11em;
-      top: -7em;
-    }
-    
+  h1 {
+    position: absolute;
+    animation: block 3s ease-in forwards;
+    display: block;
+    top: -5em;
+  }
+  
+  p {
+    position: inherit;
+    width: 11em;
+    top: -7em;
+  }
+  
 }
 
-  
+
 
 .picture {
-  position: relative;
-  top: -9em;
-  left: 12em;
-  height: 350px;
-  width: 350px;
-  border-radius: 50%;
-  object-fit: cover;
+position: relative;
+top: -9em;
+left: 12em;
+height: 350px;
+width: 350px;
+border-radius: 50%;
+object-fit: cover;
 
 }
 
 @keyframes block {
-    0% {
-      transform: translate(-110%, 0);
-    }
-     55% {
-      transform: translate(0, 0);
-    }
+  0% {
+    transform: translate(-110%, 0);
   }
+   55% {
+    transform: translate(0, 0);
+  }
+}
 
 
 
 @mixin translate50
 {
-  -webkit-transform: translate(-50, -50%);
-  -ms-transform: translate(-50, -50%);
-  -o-transform: translate(-50, -50%);
-  transform: translate(-50, -50%);
+-webkit-transform: translate(-50, -50%);
+-ms-transform: translate(-50, -50%);
+-o-transform: translate(-50, -50%);
+transform: translate(-50, -50%);
 }
 
 @mixin roundedCorners
 {
-  -webkit-border-radius: 50%; 
-  -moz-border-radius: 50%; 
-  border-radius: 50%;
+-webkit-border-radius: 50%; 
+-moz-border-radius: 50%; 
+border-radius: 50%;
 }
 
 @mixin rotateBase
 {
-  -webkit-transform: rotate3d(-1, 1, 0, 0deg);
-  -ms-transform: rotate3d(-1, 1, 0, 0deg);
-  -o-transform: rotate3d(-1, 1, 0, 0deg);
-  transform: rotate3d(-1, 1, 0, 0deg);
+-webkit-transform: rotate3d(-1, 1, 0, 0deg);
+-ms-transform: rotate3d(-1, 1, 0, 0deg);
+-o-transform: rotate3d(-1, 1, 0, 0deg);
+transform: rotate3d(-1, 1, 0, 0deg);
 }
 
 @mixin rotateRight
 {
-  -webkit-transform: rotate3d(-1, 1, 0, 30deg);
-  -ms-transform: rotate3d(-1, 1, 0, 30deg);
-  -o-transform: rotate3d(-1, 1, 0, 30deg);
-  transform: rotate3d(-1, 1, 0, 30deg);
+-webkit-transform: rotate3d(-1, 1, 0, 30deg);
+-ms-transform: rotate3d(-1, 1, 0, 30deg);
+-o-transform: rotate3d(-1, 1, 0, 30deg);
+transform: rotate3d(-1, 1, 0, 30deg);
 }
 
 @mixin rotateLeft
 {
-  -webkit-transform: rotate3d(-1, 1, 0, -30deg);
-  -ms-transform: rotate3d(-1, 1, 0, -30deg);
-  -o-transform: rotate3d(-1, 1, 0, -30deg);
-  transform: rotate3d(-1, 1, 0, -30deg);
+-webkit-transform: rotate3d(-1, 1, 0, -30deg);
+-ms-transform: rotate3d(-1, 1, 0, -30deg);
+-o-transform: rotate3d(-1, 1, 0, -30deg);
+transform: rotate3d(-1, 1, 0, -30deg);
 }
 
 // n is number of stars generated
 @function generateStars ($n)
 { 
-  $value: '#{0} #{random(2000)}px #{random(2000)}px #FFF';
+$value: '#{0} #{random(2000)}px #{random(2000)}px #FFF';
 
-  @for $i from 2 through $n
-  {
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
-  }
+@for $i from 2 through $n
+{
+  $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+}
 
-  @return unquote($value);
+@return unquote($value);
 }
 
 $stars-small:  generateStars(700);
@@ -110,115 +114,216 @@ $stars-big:    generateStars(100);
 
 body
 {
-  overflow: hidden;
+overflow: hidden;
 }
 
 #stars-container
 {
-  height: 1200px;
-  width: 100vw;
-  background: radial-gradient(ellipse at bottom, #141414 0%, #191919 100%);
-  overflow: hidden;
-  @include translate50;
-  z-index: 0;
-  left: 0;
-  top: 0;
- 
+height: calc(100vh - 50px);
+width: 100vw;
+background: radial-gradient(ellipse at bottom, #141414 0%, #191919 100%);
+overflow: hidden;
+@include translate50;
+z-index: 0;
+left: 0;
+top: 0;
+position: relative;
 }
-    
+  
 #stars
 {
+width: 1px;
+height: 1px;
+background: transparent;
+box-shadow: $stars-small;
+animation : animateStars 28.5s ease-in-out infinite;
+@include roundedCorners;
+
+&::after
+{
+  content: " ";
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; right: 0; bottom: 0;
   width: 1px;
   height: 1px;
   background: transparent;
   box-shadow: $stars-small;
-  animation : animateStars 28.5s ease-in-out infinite;
   @include roundedCorners;
-
-  &::after
-  {
-    content: " ";
-    position: absolute;
-    margin: auto;
-    top: 0; left: 0; right: 0; bottom: 0;
-    width: 1px;
-    height: 1px;
-    background: transparent;
-    box-shadow: $stars-small;
-    @include roundedCorners;
-  }
 }
-    
+}
+  
 #stars2
 {
+width: 2px;
+height: 2px;
+background: transparent;
+box-shadow: $stars-medium;
+animation : animateStars 30s ease-in-out infinite;
+@include roundedCorners;
+  
+&::after
+{
+  content: " ";
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; right: 0; bottom: 0;
   width: 2px;
   height: 2px;
   background: transparent;
   box-shadow: $stars-medium;
-  animation : animateStars 30s ease-in-out infinite;
   @include roundedCorners;
-    
-  &::after
-  {
-    content: " ";
-    position: absolute;
-    margin: auto;
-    top: 0; left: 0; right: 0; bottom: 0;
-    width: 2px;
-    height: 2px;
-    background: transparent;
-    box-shadow: $stars-medium;
-    @include roundedCorners;
-  }
 }
-    
+}
+  
 #stars3
 {
+width: 3px;
+height: 3px;
+background: transparent;
+box-shadow: $stars-big;
+animation : animateStars 31.5s ease-in-out infinite;
+@include roundedCorners;
+  
+&:after
+{
+  content: " ";
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; right: 0; bottom: 0;
   width: 3px;
   height: 3px;
   background: transparent;
   box-shadow: $stars-big;
-  animation : animateStars 31.5s ease-in-out infinite;
   @include roundedCorners;
-    
-  &:after
-  {
-    content: " ";
-    position: absolute;
-    margin: auto;
-    top: 0; left: 0; right: 0; bottom: 0;
-    width: 3px;
-    height: 3px;
-    background: transparent;
-    box-shadow: $stars-big;
-    @include roundedCorners;
-  }
+}
 }
 
 @keyframes animateStars
 {
-  0%{@include rotateBase;}
-  25%{@include rotateRight;}
-  50%{@include rotateBase;}
-  75%{@include rotateLeft;}
-  100%{@include rotateBase;}
+0%{@include rotateBase;}
+25%{@include rotateRight;}
+50%{@include rotateBase;}
+75%{@include rotateLeft;}
+100%{@include rotateBase;}
+}
+//
+$mirrored-stars-small:  generateStars(700);
+$mirrored-stars-medium: generateStars(200);
+$mirrored-stars-big:    generateStars(100);
+
+body
+{
+overflow: hidden;
 }
 
+#mirrored-stars-container
+{
+height: calc(100vh - 50px);
+width: 100vw;
+background: radial-gradient(ellipse at bottom, #141414 0%, #191919 100%);
+overflow: hidden;
+@include translate50;
+z-index: 0;
+left: 0;
+top: 0;
+position: relative;
+transform: rotate(180deg);
+}
+  
+#mirrored-stars
+{
+width: 1px;
+height: 1px;
+background: transparent;
+box-shadow: $stars-small;
+animation : animateStars 28.5s ease-in-out infinite;
+@include roundedCorners;
+
+&::after
+{
+  content: " ";
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $stars-small;
+  @include roundedCorners;
+}
+}
+  
+#mirrored-stars2
+{
+width: 2px;
+height: 2px;
+background: transparent;
+box-shadow: $stars-medium;
+animation : animateStars 30s ease-in-out infinite;
+@include roundedCorners;
+  
+&::after
+{
+  content: " ";
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $stars-medium;
+  @include roundedCorners;
+}
+}
+  
+#mirrored-stars3
+{
+width: 3px;
+height: 3px;
+background: transparent;
+box-shadow: $stars-big;
+animation : animateStars 31.5s ease-in-out infinite;
+@include roundedCorners;
+  
+&:after
+{
+  content: " ";
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $stars-big;
+  @include roundedCorners;
+}
+}
+
+@keyframes animateStars
+{
+0%{@include rotateBase;}
+25%{@include rotateRight;}
+50%{@include rotateBase;}
+75%{@include rotateLeft;}
+100%{@include rotateBase;}
+}
+//
 @media screen and (max-width: 768px) {
-  .introduction {
-    font-size: 8vw; // Adjust font size for smaller screens
-  }
+.introduction {
+  font-size: 8vw; // Adjust font size for smaller screens
+}
 
-  .hello {
-    font-size: 14vw; // Adjust font size for smaller screens
-  }
+.hello {
+  font-size: 14vw; // Adjust font size for smaller screens
+}
 
-  .about-me {
-    width: 90%; // Adjust width for smaller screens
-  }
+.about-me {
+  width: 90%; // Adjust width for smaller screens
+}
 
-  .picture {
-    height: 30vw; // Adjust size for smaller screens
-    width: 30vw; // Adjust size for smaller screens
-  }
+.picture {
+  height: 30vw; // Adjust size for smaller screens
+  width: 30vw; // Adjust size for smaller screens
+}
 }

@@ -18,6 +18,11 @@ const Home = () => {
                     <br></br>
                     <img  className='picture' src={pfp} alt='Me'/>
                 </div>
+                <div id="mirrored-stars-container">
+                    <div id='mirrored-stars'></div>
+                    <div id='mirrored-stars2'></div>
+                    <div id='mirrored-stars3'></div>
+                </div>
             </div>
     );
 
