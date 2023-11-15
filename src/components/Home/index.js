@@ -1,5 +1,12 @@
 import './index.scss'
 import pfp from '../../assets/images/pfp.JPG'
+import one from '../../assets/testing/one.jpg'
+import two from '../../assets/testing/two.jpg'
+import three from '../../assets/testing/three.png'
+import four from '../../assets/testing/four.png'
+import five from '../../assets/testing/five.jpg'
+import six from '../../assets/testing/six.png'
+
 
 
 const Home = () => {
@@ -22,6 +29,28 @@ const Home = () => {
                     <div id='mirrored-stars'></div>
                     <div id='mirrored-stars2'></div>
                     <div id='mirrored-stars3'></div>
+                </div>
+                <div className='cube-container'>
+                    <div className='cubespinner'>
+                        <div className='face1'>
+                            <img  className='number-one' src={one} alt='one'/>
+                        </div>
+                        <div className='face2'>
+                            <img  className='number-two' src={two} alt='two'/>
+                        </div>
+                        <div className='face3'>
+                            <img  className='number-three' src={three} alt='three'/>
+                        </div>
+                        <div className='face4'>
+                            <img  className='number-four' src={four} alt='four'/>
+                        </div>
+                        <div className='face5'>
+                            <img  className='number-five' src={five} alt='five'/>
+                        </div>
+                        <div className='face6'>
+                            <img  className='number-six' src={six} alt='six'/>
+                        </div>
+                    </div>
                 </div>
             </div>
     );
