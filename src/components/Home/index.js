@@ -21,7 +21,7 @@ const Home = () => {
                 <div className='introduction'>
                     <h1>Hello,</h1>
                     <br></br>
-                    <p>My name is Jesse and I am a Data Analyst.</p>
+                    <p>My name is Jesse and I am a Data Scientist.</p>
                     <br></br>
                     <img  className='picture' src={pfp} alt='Me'/>
                 </div>
@@ -32,23 +32,23 @@ const Home = () => {
                 </div>
                 <div className='cube-container'>
                     <div className='cubespinner'>
-                        <div className='face1'>
-                            <img  className='number-one' src={one} alt='one'/>
+                        <div className='face face1'>
+                            <img className='number-one' src={one} alt='one'/>
                         </div>
-                        <div className='face2'>
-                            <img  className='number-two' src={two} alt='two'/>
+                        <div className='face face2'>
+                            <img className='number-two' src={two} alt='two'/>
                         </div>
-                        <div className='face3'>
-                            <img  className='number-three' src={three} alt='three'/>
+                        <div className='face face3'>
+                            <img className='number-three' src={three} alt='three'/>
                         </div>
-                        <div className='face4'>
-                            <img  className='number-four' src={four} alt='four'/>
+                        <div className='face face4'>
+                            <img className='number-four' src={four} alt='four'/>
                         </div>
-                        <div className='face5'>
-                            <img  className='number-five' src={five} alt='five'/>
+                        <div className='face face5'>
+                            <img className='number-five' src={five} alt='five'/>
                         </div>
-                        <div className='face6'>
-                            <img  className='number-six' src={six} alt='six'/>
+                        <div className='face face6'>
+                            <img className='number-six' src={six} alt='six'/>
                         </div>
                     </div>
                 </div>
