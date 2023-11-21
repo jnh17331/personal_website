@@ -1,28 +1,29 @@
 import './index.scss'
 import pfp from '../../assets/images/pfp.JPG'
-import one from '../../assets/testing/one.jpg'
-import two from '../../assets/testing/two.jpg'
-import three from '../../assets/testing/three.png'
-import four from '../../assets/testing/four.png'
-import five from '../../assets/testing/five.jpg'
-import six from '../../assets/testing/six.png'
+import ml_music from '../../assets/images/ml_music.png'
+import pokedex from '../../assets/images/pokedex.png'
+import movie_analysis from '../../assets/images/movie_analysis.png'
+import eq_leaflet from '../../assets/images/eq_leaflet.png'
+import mars_webscraping from '../../assets/images/mars_webscraping.png'
+import website from '../../assets/images/website_capture.png'
 
 
 
 const Home = () => {
 
+
     return (
-            <div className='page'>
+            <main className='page'>
                 <div id="stars-container">
                     <div id='stars'></div>
                     <div id='stars2'></div>
                     <div id='stars3'></div>
                 </div>
                 <div className='introduction'>
-                    <h1>Hello,</h1>
-                    <br></br>
+                    <h1>Hello world,</h1>
+                    <br />
                     <p>My name is Jesse and I am a Data Scientist.</p>
-                    <br></br>
+                    <br />
                     <img  className='picture' src={pfp} alt='Me'/>
                 </div>
                 <div id="mirrored-stars-container">
@@ -31,28 +32,28 @@ const Home = () => {
                     <div id='mirrored-stars3'></div>
                 </div>
                 <div className='cube-container'>
-                    <div className='cubespinner'>
-                        <div className='face face1'>
-                            <img className='number-one' src={one} alt='one'/>
+                    <div className='cube'>
+                        <div className='face front'>
+                            <img className='number-one' src={ml_music} alt='ml_music'/>
                         </div>
-                        <div className='face face2'>
-                            <img className='number-two' src={two} alt='two'/>
+                        <div className='face back'>
+                            <img className='number-two' src={pokedex} alt='pokedex'/>
                         </div>
-                        <div className='face face3'>
-                            <img className='number-three' src={three} alt='three'/>
+                        <div className='face right'>
+                            <img className='number-three' src={eq_leaflet} alt='eq_leaflet'/>
                         </div>
-                        <div className='face face4'>
-                            <img className='number-four' src={four} alt='four'/>
+                        <div className='face left'>
+                            <img className='number-four' src={movie_analysis} alt='movie_analysis'/>
                         </div>
-                        <div className='face face5'>
-                            <img className='number-five' src={five} alt='five'/>
+                        <div className='face top'>
+                            <img className='number-five' src={mars_webscraping} alt='mars_webscraping'/>
                         </div>
-                        <div className='face face6'>
-                            <img className='number-six' src={six} alt='six'/>
+                        <div className='face bottom'>
+                            <img className='number-six' src={website} alt='website'/>
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
     );
 
 }

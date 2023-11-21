@@ -21,7 +21,9 @@ html {
     position: absolute;
     animation: block 3s ease-in forwards;
     display: block;
-    top: -5em;
+    top: -5.20em;
+    width: 6em;
+    font-size: 200px;
   }
   
   p {
@@ -32,8 +34,6 @@ html {
   
 }
 
-
-
 .picture {
 position: relative;
 top: -9em;
@@ -42,6 +42,7 @@ height: 350px;
 width: 350px;
 border-radius: 50%;
 object-fit: cover;
+z-index: auto;
 
 }
 
@@ -53,8 +54,6 @@ object-fit: cover;
     transform: translate(0, 0);
   }
 }
-
-
 
 @mixin translate50
 {
@@ -207,7 +206,7 @@ animation : animateStars 31.5s ease-in-out infinite;
 75%{@include rotateLeft;}
 100%{@include rotateBase;}
 }
-//
+
 $mirrored-stars-small:  generateStars(700);
 $mirrored-stars-medium: generateStars(200);
 $mirrored-stars-big:    generateStars(100);
@@ -308,30 +307,36 @@ animation : animateStars 31.5s ease-in-out infinite;
 75%{@include rotateLeft;}
 100%{@include rotateBase;}
 }
+
 //
 
 .cube-container {
-  max-width: 12.5em;
-  max-height: 12.5em;
-  top: 125vh;
+  width: 0%;
+  max-height: 0%;
+  top: 85vh;
+  left: 0;
+  padding-top: 18%;
+  margin-left: 0;
   position: absolute;
-  margin: 0em 30em;
-  transform: translate(-50%, -50%);
   perspective: 150em;
-
+  margin: 0 20em;
 }
 
-.cubespinner {
-  animation: spincube 100s ease-in-out infinite;
+.cube {
+  animation: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 100s;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
+  transform-origin: center center 0;
 }
 
 .face {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border: 1px solid #141414;
   background: #191919;
   text-align: center;
@@ -347,68 +352,48 @@ animation : animateStars 31.5s ease-in-out infinite;
   }
 }
 
-.face1 {
-  transform: translateZ(100px);
+.front {
+  transform: translateZ(150px);
 }
 
-.face2 {
-  transform: rotateY(90deg) translateZ(100px);
+.back {
+  transform: rotateY(90deg) translateZ(150px);
 }
 
-.face3 {
-  transform: rotateY(180deg) translateZ(100px);
+.right {
+  transform: rotateY(180deg) translateZ(150px);
 }
 
-.face4 {
-  transform: rotateY(-90deg) translateZ(100px);
+.left {
+  transform: rotateY(-90deg) translateZ(150px);
 }
 
-.face5 {
-  transform: rotateX(-90deg) translateZ(100px);
+.top {
+  transform: rotateX(-90deg) translateZ(150px);
 }
 
-.face6 {
-  transform: rotateX(-90deg) rotateY(180deg) translateZ(100px);
+.bottom {
+  transform: rotateX(-90deg) rotateY(180deg) translateZ(150px);
 }
 
 @keyframes spincube {
   from,
   to {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0) translateY(0) translateZ(0);  
   }
   16% {
-    transform: rotateY(-90deg) rotateX(360deg);
+    transform: rotateY(-90deg) translateY(-20px) translateZ(-130px);
   }
   33% {
-    transform: rotateY(-180deg) rotateX(360deg) rotateZ(360deg);
+    transform: rotateY(-180deg) translateX(-300px);
   }
   50% {
-    transform: rotateY(-270deg) rotateZ(360deg);
+    transform: rotateY(-270deg) translateX(-100px) translateZ(150px);
   }
   66% {
-    transform: rotateY(-270deg) rotateX(90deg) rotateZ(90deg);
+    transform: rotateY(-270deg) rotateX(90deg) rotateZ(90deg) translateY(-100px) translateZ(-150px);
   }
   83% {
-    transform: rotateY(-270deg)  rotateX(-270deg) rotateZ(-90deg);
+    transform: rotateY(-90deg) rotateX(90deg) rotateZ(90deg) translateX(-310px) translateZ(-180px);
   }
-}
-
-
-@media screen and (max-width: 100px) {
-.introduction {
-  font-size: 8vw; // Adjust font size for smaller screens
-}
-
-.hello {
-  font-size: 14vw; // Adjust font size for smaller screens
-}
-
-.about-me {
-  width: 90%; // Adjust width for smaller screens
-}
-
-.picture {
-  height: 30vw; // Adjust size for smaller screens
-  width: 30vw; // Adjust size for smaller screens
-}
 }
