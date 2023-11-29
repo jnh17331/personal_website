@@ -4,12 +4,15 @@ html {
 
 .page {
   height: 110vh;
+  width: 100vw;
   padding: 0;
+  scroll-snap-align: start;
   position: absolute;
   overflow: auto;    
 }
 
 .introduction {
+  display: flex;
   font-family: Geneva;
   font-size: 6vw;
   color: #6495ed;
@@ -218,7 +221,7 @@ overflow: hidden;
 
 #mirrored-stars-container
 {
-height: calc(100vh - 100px);
+height: 100vh;
 width: 100vw;
 background: radial-gradient(ellipse at bottom, #141414 0%, #191919 100%);
 overflow: hidden;
@@ -320,13 +323,14 @@ animation : animateStars 31.5s ease-in-out infinite;
   position: absolute;
   perspective: 150em;
   margin: 0 20em;
+  display: flex
 }
 
 .cube {
   animation: spincube;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 100s;
+  animation-duration: 120s;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
