@@ -1,0 +1,35 @@
+.about-page {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 5em;
+}
+
+.about-me {
+    position: absolute;
+    top: 8em;
+    right: 3em;
+    width: 75em;
+
+    h2 {
+        right: 0;
+        font-size: 4em;
+        color: #6495ed;
+    }
+
+    p {
+        font-size: 1.75em;
+        color: #c0c0c0
+    }
+}
+
+.about-picture {
+    left: 10em;
+    top: 12em;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px 0px #000;
+    }

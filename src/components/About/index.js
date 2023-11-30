@@ -1,9 +1,24 @@
 import './index.scss'
+import pfp from '../../assets/images/pfp.JPG'
 
 const About = () => {
 
     return (
-        "TESTING"
+        <div className='container about-page'>
+            <div className='about-me'>
+                <h2>
+                    Hello, my name is Jesse.
+                </h2>
+                <p>
+                    I am a Data Scientist/Analyst and am currently located in Hanover, Pennsylvania. My journey in coding began in high school and was reignited in 2020, 
+                    culminating in the recent acquisition of my Data Science certificate through Rutgers Bootcamps. The programming languages I am most proficient in are Python, 
+                    Javascript, HTML, CSS, Git, and CLI. I am passionate about coding because it empowers me to make any idea come to life or make anything in life easier, which is
+                    valuable creative outlet. Outside of coding I have my dog, Marshall, that I love taking on walks, hikes, or playing a game of tug of war with. I am also an 
+                    avid music fan with a love of many genres such as Hip-hop, Jazz, Rock, or Indie to name a few. 
+                </p>
+            </div>
+            <img  className='about-picture' src={pfp} alt='Me'/>
+        </div>
     )
 
 }
