@@ -37,11 +37,23 @@ body {
                 border-radius: 50%;
                 background: rgba(0,0,0,0);
 
-            }
+                &:hover {
+                    background: #6495ed;
+                }
 
+            }
+            
+        }
+
+        .contact-link {
+
+            font-size: 35px;
+            color: #000;
+            height: auto;
+                
             &:hover {
-                filter: brightness(80%);
-              }
+                    color: #6495ed;
+            }
         }
     }
 }
@@ -52,11 +64,3 @@ body {
 }
 
 
-.contact-link {
-
-        
-        font-size: 35px;
-        color: #000;
-        height: auto;
-
-}

@@ -31,7 +31,7 @@ const Contact = () => {
         <div className='container contact-page'>
             <div className='text-zone'>
                 <h1>
-                    Contact Me
+                    Contact Me!
                 </h1>
                 <p>
                 I'm thrilled to connect with fellow enthusiasts, curious minds, and potential collaborators. Whether you share a passion for programming, have burning questions about the 
