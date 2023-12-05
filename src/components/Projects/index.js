@@ -1,28 +1,36 @@
-import './index.scss'
-// import React, { useEffect, useState } from 'react';
-// import ReactDOM from 'react-dom';
-
+import './index.scss';
+import React, { useEffect, useState } from 'react';
 
 const Projects = () => {
-  // const [data, setData] = useState({});
+  const [projectlist, setProjects] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:8000/api-test/")
-  //   .then(
-  //     res => res.json()
-  //   )
-  //   .then(
-  //     data => {
-  //       setData(data)
-  //       console.log(data)
-  //     });
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/projects');
+        const data = await response.json();
 
-  // }, []);
+        setProjects(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
-    return (
-        "TESTING"
-    );
+    fetchData();
+  }, []);
 
-}
+  return (
+    <div className='projects-page'>
+      <h2>Projects</h2>
+      <ul>
+        {projectlist.map((project) => ( 
+          <li key={project.id}>
+            <strong>{project.name}</strong>: {project.description}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export default Projects;
