@@ -3,7 +3,7 @@
     height: 100vh;
     position: absolute;
     top: 5em;
-    left: 1em;
+    left: 1.3em;
     justify-content: center;
 }
 
@@ -74,4 +74,8 @@ textarea {
     letter-spacing: 2px;
     border: 0.5px solid;
     border-radius: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+    
 }

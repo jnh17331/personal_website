@@ -19,6 +19,7 @@ html {
   position: absolute;
   display: grid;
   margin: 3em .35em;
+  top: 7em;
 
   h1 {
     position: absolute;
@@ -26,7 +27,7 @@ html {
     display: block;
     top: -5.20em;
     width: 6em;
-    font-size: 200px;
+    font-size: 10vw;
   }
   
   p {
@@ -39,10 +40,10 @@ html {
 
 .picture {
 position: relative;
-top: -9em;
+top: -8em;
 left: 12em;
-height: 350px;
-width: 350px;
+height: 3em;
+width: 3em;
 border-radius: 50%;
 object-fit: cover;
 z-index: auto;
@@ -331,16 +332,14 @@ animation : animateStars 31.5s ease-in-out infinite;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-duration: 120s;
-  width: 100%;
-  height: 100%;
   transform-style: preserve-3d;
   transform-origin: center center 0;
 }
 
 .face {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 3em;
+  height: 3em;
   border: 1px solid #141414;
   background: #191919;
   text-align: center;
@@ -399,5 +398,28 @@ animation : animateStars 31.5s ease-in-out infinite;
   }
   83% {
     transform: rotateY(-90deg) rotateX(90deg) rotateZ(90deg) translateX(-310px) translateZ(-180px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .introduction {
+    top: 22em;
+    left: 2.5em;
+
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      margin-top: 0;
+      font-size: 1em;
+    }
+
+    .picture {
+      left: 1.7em;
+      top: -22em;
+      width: 8em;
+      height: 8em;
+    }
   }
 }

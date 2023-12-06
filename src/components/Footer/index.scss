@@ -64,3 +64,25 @@ body {
 }
 
 
+@media only screen and (max-width: 768px) {
+    .footer {
+        ul {
+
+            left: 1em;
+            
+            li {
+                a {
+                    margin: 0 1em;
+
+                    img {
+                        width: 1.75em;
+                    }
+                }
+            }
+
+            .contact-link {
+                font-size: 1.75em;
+            }
+        }
+    }
+}

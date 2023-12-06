@@ -96,14 +96,12 @@
     .nav-bar {
         nav {
 
-            height: 10px
-
             ul {
-                margin: 0;
+                justify-content: center;
             }
             a {
                 font-size: 16px;
-                margin: 0 0px;
+                margin: 0 5px;
             }
         }
     }
