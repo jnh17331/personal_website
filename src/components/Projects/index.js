@@ -22,13 +22,15 @@ const Projects = () => {
   return (
     <div className='projects-page'>
       <h2>Projects</h2>
-      <ul>
+      <div className='card-container'>
         {projectlist.map((project) => ( 
-          <li key={project.id}>
-            <strong>{project.name}</strong>: {project.description}
-          </li>
+          <div key={project.id} className='project-card'>
+            <strong>{project.name}</strong>:<br /> 
+            <i>{project.skills}</i><br />
+            {project.description} 
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

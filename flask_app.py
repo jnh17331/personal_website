@@ -14,11 +14,6 @@ CORS(app)
 def home():
     return ('')
 
-
-@app.route('/contact', methods=['GET'])
-def contact():
-    return "Under Construction"
-
 @app.route('/api/projects', methods=['GET'])
 def projects():
     conn = sqlite3.connect(database_path)
@@ -31,17 +26,12 @@ def projects():
 
     rows = cursor.fetchall()
 
-    projects_data = [{'id': row[0], 'name': row[1], 'description': row[2]} for row in rows]
+    projects_data = [{'id': row[0], 'name': row[1], 'description': row[2], 'skills':row[3]} for row in rows]
 
     conn.close()
 
     return jsonify(projects_data)
 
-
-
-@app.route('/about', methods=['GET'])
-def about():
-    return "Under Construction"
 
 @app.route('/api-test/', methods=['GET'])
 def get_data():

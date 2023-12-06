@@ -3,4 +3,22 @@
     height: 100vh;
     position: absolute;
     top: 5em;
-}
+    left: 1em;
+
+    h2 {
+      margin-bottom: 1em;
+    }
+  
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      
+  
+      .project-card {
+        background-color: rgb(88, 88, 88);
+        padding: .5em;
+        width: 27em;
+      }
+    }
+  }
