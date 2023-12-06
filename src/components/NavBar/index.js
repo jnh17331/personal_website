@@ -2,33 +2,12 @@ import { Link, NavLink } from 'react-router-dom'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faEnvelope, faSitemap, faGlobe } from '@fortawesome/free-solid-svg-icons'
-import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
-
-    const [isSticky, setSticky] = useState(false);
-
-  
-    const handleScroll = () => {
-        if (window.scrollY > 0) {
-        setSticky(true);
-        } else {
-        setSticky(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-        window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     return (
             <div className='container'>
-                <div className={`nav-bar ${isSticky ? 'sticky' : ''}`}>
+                <div className='nav-bar'>
                     <Link className='profile-pic' to='/'>
-                        {/*<img src={pfp} alt='pfp' className='profile-image' />*/}
                     </Link>
                     <nav>
                         <ul>

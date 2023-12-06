@@ -1,53 +1,37 @@
-body {
-    margin: 0;
-}
-
 .container {
     display: flex;
     justify-content: center;
     position: relative;
     min-height: 100vh;
-    margin: 0;
     padding: 0;
 }
 
 .nav-bar {
     background: #181818;
-    width: 100%;
+    width: 100vw;
     height: 75px;
-    position: relative;
+    position: sticky;
     top: 0;
     z-index: 3;
     transition: all 0.3s;
 
-    &.sticky {
-        position: fixed;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-        background: #181818; 
-    }
-    
-    
     nav {
 
         position: sticky;
-
+    
         ul {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            list-style: none;
             margin-top: 10px;
-            margin-right: 10px;
         }
 
         a {
-            font-size: 22px;
+            font-size: 1.2em;
             color: #4d4d4e;
             display: flex;
             align-items: center;
-            line-height: 51px;
             height: 51px;
-            text-align: center;
+            margin: 0 5em;
 
             i {
                 transition: all .3s ease-out;
@@ -68,12 +52,10 @@ body {
             &:after {
                 content: '';
                 font-size: 12px;
-                margin: 0 -30px;
                 letter-spacing: 2px;
-                position: relative;
-                bottom: 0;
+                left: 50%;
+                transform: translateX(-70%);
                 display: flex;
-                width: 100%;
                 opacity: 0;
                 transition: all .3s ease-out;
             }
@@ -105,27 +87,23 @@ body {
                     color: #6495ed;
                 }
             }
-    
-
-        margin: 0 125px;
-    
         } 
     }
 
 }
 
-.profile-image {
-    max-height: 300px;
-    height: auto;
-    width: auto;
-}
-
 @media only screen and (max-width: 768px) {
     .nav-bar {
         nav {
+
+            height: 10px
+
+            ul {
+                margin: 0;
+            }
             a {
                 font-size: 16px;
-                margin: 0 10px;
+                margin: 0 0px;
             }
         }
     }
