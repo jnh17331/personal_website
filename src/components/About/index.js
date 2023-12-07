@@ -5,9 +5,10 @@ const About = () => {
 
     return (
         <div className='container about-page'>
+            <img  className='about-picture' src={pfp} alt='Me'/>
             <div className='about-me'>
                 <h2>
-                    Hello, my name is Jesse.
+                    My name is Jesse,
                 </h2>
                 <p>
                     I am a Data Scientist/Analyst and am currently located in Hanover, Pennsylvania. My journey in coding began in high school and was reignited in 2020, 
@@ -17,7 +18,7 @@ const About = () => {
                     avid music fan with a love of many genres such as Hip-hop, Jazz, Rock, or Indie to name a few. 
                 </p>
             </div>
-            <img  className='about-picture' src={pfp} alt='Me'/>
+            
         </div>
     )
 

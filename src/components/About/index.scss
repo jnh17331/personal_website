@@ -1,35 +1,53 @@
 .about-page {
     width: 100vw;
     height: 100vh;
-    position: absolute;
-    top: 5em;
+    position: relative;
+    top: -55em;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .about-me {
-    position: absolute;
-    top: 8em;
-    right: 3em;
-    width: 75em;
+    width: 66%;
+    max-width: 90em;
+    margin-top: 11em;
 
     h2 {
-        right: 0;
         font-size: 4em;
         color: #6495ed;
+        margin-right: 2em;
     }
 
     p {
-        font-size: 1.75em;
-        color: #c0c0c0
+        font-size: 200%;
+        color: #c0c0c0;
+        margin-right: 2em;
+        margin-bottom: 3em;
     }
 }
 
 .about-picture {
-    left: 10em;
-    top: 12em;
-    position: absolute;
-    height: 350px;
-    width: 350px;
+    margin: 15em 7em;
+    height: 20em;
+    width: 20em;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 15px 0px #000;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .about-picture {
+        width: 8em;
+        height: 8em;
+
+        h2 {
+            font-size: 2em;
+            margin: 0;
+        }
+        p {
+            font-size: 1em;
+            margin: 0;
+        }
     }
+  }

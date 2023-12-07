@@ -7,8 +7,6 @@ import eq_leaflet from '../../assets/images/eq_leaflet.png'
 import mars_webscraping from '../../assets/images/mars_webscraping.png'
 import website from '../../assets/images/website_capture.png'
 
-
-
 const Home = () => {
 
 

@@ -25,7 +25,7 @@ const Projects = () => {
       <div className='card-container'>
         {projectlist.map((project) => ( 
           <div key={project.id} className='project-card'>
-            <strong>{project.name}</strong>:<br /> 
+            <strong>{project.name}</strong><br /> 
             <i>{project.skills}</i><br />
             {project.description} 
           </div>
