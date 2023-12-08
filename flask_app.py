@@ -40,6 +40,29 @@ def projects():
 
     return jsonify(projects_data)
 
+@app.route('/api/blogs', methods=['GET'])
+def blogs():
+    conn = sqlite3.connect(database_path)
+    cursor = conn.cursor()
+
+    query = "SELECT * FROM blog_db"
+    params = ""
+
+    cursor.execute(query, params)
+
+    rows = cursor.fetchall()
+
+    projects_data = [{
+        'id': row[0],
+        'blog_title': row[1],
+        'blog_message': row[2],
+        'date':row[3]
+        } for row in rows]
+
+    conn.close()
+
+    return jsonify(projects_data)
+
 @app.route('/api/images/<filename>', methods=['GET'])
 def get_image(filename):
     image_folder = os.path.join(app_root, 'src', 'assets', 'images', 'projects')

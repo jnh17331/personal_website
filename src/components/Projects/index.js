@@ -28,7 +28,7 @@ const Projects = () => {
             <img src={`http://localhost:8000${project.imageURL}`} alt={project.name} />
             <strong>{project.name}</strong><br /> 
             <i>{project.skills}</i><br /><br />
-            {project.description} 
+            <p className='project-description'>{project.description}</p> 
           </div>
         ))}
       </div>
