@@ -2,8 +2,10 @@ import os
 import sqlite3
 from sqlalchemy import create_engine
 from pathlib import Path
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, send_from_directory
 from flask_cors import CORS, cross_origin
+
+app_root = os.path.dirname(__file__)
 
 database_path = os.path.join(os.path.dirname(__file__), 'sqlite_db', 'project_db.sqlite')
 
@@ -26,11 +28,22 @@ def projects():
 
     rows = cursor.fetchall()
 
-    projects_data = [{'id': row[0], 'name': row[1], 'description': row[2], 'skills':row[3]} for row in rows]
+    projects_data = [{
+        'id': row[0],
+        'name': row[1],
+        'description': row[2],
+        'skills':row[3],
+        'imageURL': f'/api/images/{row[4]}'
+        } for row in rows]
 
     conn.close()
 
     return jsonify(projects_data)
+
+@app.route('/api/images/<filename>', methods=['GET'])
+def get_image(filename):
+    image_folder = os.path.join(app_root, 'src', 'assets', 'images', 'projects')
+    return send_from_directory(image_folder, filename)
 
 
 @app.route('/api-test/', methods=['GET'])

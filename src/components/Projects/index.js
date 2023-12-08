@@ -25,8 +25,9 @@ const Projects = () => {
       <div className='card-container'>
         {projectlist.map((project) => ( 
           <div key={project.id} className='project-card'>
+            <img src={`http://localhost:8000${project.imageURL}`} alt={project.name} />
             <strong>{project.name}</strong><br /> 
-            <i>{project.skills}</i><br />
+            <i>{project.skills}</i><br /><br />
             {project.description} 
           </div>
         ))}

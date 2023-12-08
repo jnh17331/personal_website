@@ -1,11 +1,11 @@
 import './index.scss'
 import pfp from '../../assets/images/pfp.JPG'
-import ml_music from '../../assets/images/ml_music.png'
-import pokedex from '../../assets/images/pokedex.png'
-import movie_analysis from '../../assets/images/movie_analysis.png'
-import eq_leaflet from '../../assets/images/eq_leaflet.png'
-import mars_webscraping from '../../assets/images/mars_webscraping.png'
-import website from '../../assets/images/website_capture.png'
+import ml_music from '../../assets/images/projects/ml_music.png'
+import pokedex from '../../assets/images/projects/pokedex.png'
+import movie_analysis from '../../assets/images/projects/movie_analysis.png'
+import eq_leaflet from '../../assets/images/projects/eq_leaflet.png'
+import mars_webscraping from '../../assets/images/projects/mars_webscraping.png'
+import website from '../../assets/images/projects/website_capture.png'
 
 const Home = () => {
 

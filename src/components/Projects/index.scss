@@ -10,6 +10,9 @@
       margin-left: calc(50vw - 2em);
       margin-bottom: 1em;
       font-size: 2.5em;
+      color: #6495ed;
+      text-shadow: #6495ed 1px 0 10px;
+      
     }
   
     .card-container {
@@ -23,6 +26,12 @@
         padding: .5em;
         width: 27em;
         border-radius: 10px;
+
+        img {
+          height: 60%;
+          width: 100%;
+          object-fit: contain;
+        }
       }
     }
   }

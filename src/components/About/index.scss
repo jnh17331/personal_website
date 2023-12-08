@@ -27,13 +27,29 @@
 }
 
 .about-picture {
-    margin: 15em 7em;
+    margin: 14em 7em;
     height: 20em;
     width: 20em;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 15px 0px #000;
 }
+
+.contactme-button {
+    position: absolute;
+    top: 37em;
+    left: 17.5em;
+
+    button {
+        color: #6495ed;
+        background: 0 0;
+        font: 3em;
+        letter-spacing: 2px;
+        border: 0.5px solid;
+        border-radius: 3px;
+    }
+}
+
 
 @media only screen and (max-width: 768px) {
 

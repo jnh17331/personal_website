@@ -1,11 +1,16 @@
 import './index.scss'
 import pfp from '../../assets/images/pfp.JPG'
+import { Link } from 'react-router-dom';
 
 const About = () => {
 
     return (
+        
         <div className='container about-page'>
             <img  className='about-picture' src={pfp} alt='Me'/>
+                <Link to='/contact' className='contactme-button'>
+                    <button>Contact Me</button> 
+                </Link>
             <div className='about-me'>
                 <h2>
                     My name is Jesse,
@@ -18,8 +23,8 @@ const About = () => {
                     avid music fan with a love of many genres such as Hip-hop, Jazz, Rock, or Indie to name a few. 
                 </p>
             </div>
-            
         </div>
+
     )
 
 }
