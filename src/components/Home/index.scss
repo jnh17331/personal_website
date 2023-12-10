@@ -48,6 +48,18 @@ z-index: auto;
 
 }
 
+.project-textzone {
+  position: relative;
+  top: -40em;
+  max-width: 50%;
+  left: 55em;
+  color: #6495ed;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  margin: 0em 2em;
+}
+
 @keyframes block {
   0% {
     transform: translate(-110%, 0);
@@ -333,6 +345,7 @@ animation : animateStars 31.5s ease-in-out infinite;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-duration: 120s;
+  animation-delay: 7s;
   transform-style: preserve-3d;
   transform-origin: center center 0;
 }
@@ -379,6 +392,7 @@ animation : animateStars 31.5s ease-in-out infinite;
 .bottom {
   transform: rotateX(-90deg) rotateY(180deg) translateZ(150px);
 }
+
 
 @keyframes spincube {
   from,

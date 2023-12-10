@@ -18,7 +18,7 @@ const Projects = () => {
 
     fetchData();
   }, []);
-
+  
   return (
     <div className='projects-page'>
       <h2>Projects</h2>

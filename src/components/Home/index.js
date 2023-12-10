@@ -1,15 +1,47 @@
-import './index.scss'
+import './index.scss';
+import React, { useEffect, useState}  from 'react';
 import { Link } from 'react-router-dom';
-import pfp from '../../assets/images/pfp.JPG'
-import ml_music from '../../assets/images/projects/ml_music.png'
-import pokedex from '../../assets/images/projects/pokedex.png'
-import movie_analysis from '../../assets/images/projects/movie_analysis.png'
-import eq_leaflet from '../../assets/images/projects/eq_leaflet.png'
-import mars_webscraping from '../../assets/images/projects/mars_webscraping.png'
-import website from '../../assets/images/projects/website_capture.png'
+import ArrayDisplayer from '../ArrayDisplayer';
+import pfp from '../../assets/images/pfp.JPG';
+import ml_music from '../../assets/images/projects/ml_music.png';
+import pokedex from '../../assets/images/projects/pokedex.png';
+import movie_analysis from '../../assets/images/projects/movie_analysis.png';
+import eq_leaflet from '../../assets/images/projects/eq_leaflet.png';
+import mars_webscraping from '../../assets/images/projects/mars_webscraping.png';
+import website from '../../assets/images/projects/website_capture.png';
 
 const Home = () => {
+    const [projectlist, setProjects] = useState([]);
 
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('http://localhost:8000/api/projects');
+          const data = await response.json();
+  
+          setProjects(data);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
+  
+      fetchData();
+    }, []);     
+
+    
+    const cubeprojectIDs = [2, 4, 3, 5, 6, 1];
+
+    const cubeprojects = projectlist
+        .filter((project) => cubeprojectIDs.includes(project.id))
+        .map((project) => ({
+            id: project.id,
+            name: project.name,
+            description: project.description,
+        }))
+        .sort((a, b) => cubeprojectIDs.indexOf(a.id) - cubeprojectIDs.indexOf(b.id));
+
+    const itemTitles = cubeprojects.map((project) => project.name);
+    const itemsDescriptions = cubeprojects.map((project) => project.description);
 
     return (
             <main className='page'>
@@ -30,7 +62,6 @@ const Home = () => {
                     <div id='mirrored-stars2'></div>
                     <div id='mirrored-stars3'></div>
                 </div>
-                
                 <div className='cube-container'>
                     <Link to='/projects'>
                         <div className='cube'>
@@ -55,7 +86,10 @@ const Home = () => {
                         </div>
                     </Link>
                 </div>
-                
+                <div className='project-textzone'>
+                    <h1><ArrayDisplayer items={itemTitles} /></h1>
+                    <ArrayDisplayer items={itemsDescriptions} />
+                </div>
             </main>
     );
 
