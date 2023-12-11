@@ -1,9 +1,6 @@
 .container {
     display: flex;
-    justify-content: center;
-    position: relative;
     min-height: 100vh;
-    padding: 0;
 }
 
 .nav-bar {
@@ -16,12 +13,10 @@
     transition: all 0.3s;
 
     nav {
-
-        position: sticky;
     
         ul {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             margin-top: 10px;
         }
 

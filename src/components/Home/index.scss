@@ -11,34 +11,34 @@ html {
 }
 
 .introduction {
-  display: flex grid;
+  display: flex;
+  position: absolute;
   font-family: Geneva;
   font-size: 6vw;
   color: #6495ed;
-  position: absolute;
-  margin: 3em .35em;
-  top: 7em;
+  margin: 2em 0.35em;
+  top: 0em;
+
 
   h1 {
     position: absolute;
     animation: block 3s ease-in forwards;
     display: block;
-    top: -5.20em;
     width: 6em;
     font-size: 10vw;
+    top: -0.75em;
   }
   
   p {
     position: inherit;
     width: 11em;
-    top: -6.75em;
+    top: .75em;
   }
   
 }
 
 .picture {
 position: relative;
-top: -10em;
 left: 12em;
 height: 3em;
 width: 3em;
@@ -49,15 +49,15 @@ z-index: auto;
 }
 
 .project-textzone {
-  position: relative;
-  top: -40em;
-  max-width: 50%;
-  left: 55em;
+  position: absolute;
+  top: 75em;
+  width: 55em;
+  left: 38%;
   color: #6495ed;
   font-size: 1em;
   display: flex;
   flex-direction: column;
-  margin: 0em 2em;
+  margin: 0em 4em;
 }
 
 @keyframes block {
@@ -328,8 +328,8 @@ animation : animateStars 31.5s ease-in-out infinite;
 .cube-container {
   width: 100%;
   height: 50vh;
-  top: 80%;
-  left: -30%;
+  top: 85%;
+  left: -35%;
   padding-top: 5%;
   margin-left: 0;
   position: absolute;
@@ -400,7 +400,7 @@ animation : animateStars 31.5s ease-in-out infinite;
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0) translateY(0) translateZ(0);  
   }
   16% {
-    transform: rotateY(-90deg) translateY(-20px) translateZ(-130px);
+    transform: rotateY(-90deg) translateY(-20px) translateZ(-150px);
   }
   33% {
     transform: rotateY(-180deg) translateX(-300px);
@@ -412,34 +412,45 @@ animation : animateStars 31.5s ease-in-out infinite;
     transform: rotateY(-270deg) rotateX(90deg) rotateZ(90deg) translateY(-100px) translateZ(-150px);
   }
   83% {
-    transform: rotateY(-90deg) rotateX(90deg) rotateZ(90deg) translateX(-310px) translateZ(-180px);
+    transform: rotateY(-90deg) rotateX(90deg) rotateZ(90deg) translateX(-300px) translateZ(-150px);
   }
 }
 
 @media only screen and (max-width: 768px) {
 
   .introduction {
-    top: 22em;
-    left: 2.5em;
+    top: 60%;
+    left: 16%;
 
     h1 {
+      top: -3.5em;
       font-size: 2em;
     }
     p {
+      top: -2.5em;
       margin-top: 0;
       font-size: 1em;
     }
 
     .picture {
       left: 1.7em;
-      top: -22em;
+      top: -18em;
       width: 8em;
       height: 8em;
     }
   }
 
+  .project-textzone {
+    justify-content: center;
+    font-size: 0.75em;
+    left: 10%;
+    max-width: 70%;
+    top: 130%;
+  }
+
   .cube-container {
-    left: -10%;
+    top: 85%;
+    left: -15%;
   }
 
   .face {
@@ -469,5 +480,26 @@ animation : animateStars 31.5s ease-in-out infinite;
   
   .bottom {
     transform: rotateX(-90deg) rotateY(180deg) translateZ(63px);
+  }
+
+  @keyframes spincube {
+    from, to {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0) translateY(0) translateZ(0);
+    }
+    16% {
+      transform: rotateY(-90deg) translateY(-20px) translateZ(-63px);
+    }
+    33% {
+      transform: rotateY(-180deg) translateX(-126px);
+    }
+    50% {
+      transform: rotateY(-270deg) translateX(-70px) translateZ(63px);
+    }
+    66% {
+      transform: rotateY(-270deg) rotateX(90deg) rotateZ(90deg) translateY(-42px) translateZ(-63px);
+    }
+    83% {
+      transform: rotateY(-90deg) rotateX(90deg) rotateZ(90deg) translateX(-126px) translateZ(-63px);
+    }
   }
 }

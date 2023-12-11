@@ -52,9 +52,7 @@ const Home = () => {
                 </div>
                 <div className='introduction'>
                     <h1>Hello world,</h1>
-                    <br />
                     <p>My name is Jesse and I am a Data Scientist.</p>
-                    <br />
                     <img  className='picture' src={pfp} alt='Me'/>
                 </div>
                 <div id="mirrored-stars-container">
