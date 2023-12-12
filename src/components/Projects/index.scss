@@ -39,9 +39,12 @@
   @media only screen and (max-width: 768px) {
 
     .card-container {
-      margin-right: 1em;
+      margin-right: 2em;
       
       .project-card{
+
+        left: -0.5em;
+
         .project-description {
           font-size: 0.65em;
         }

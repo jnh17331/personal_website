@@ -1,8 +1,7 @@
 .about-page {
     width: 100vw;
     height: 100vh;
-    position: relative;
-    top: -55em;
+    position: absolute;
     box-sizing: border-box;
     overflow-y: auto;
 }
@@ -38,7 +37,7 @@
 .contactme-button {
     position: absolute;
     top: 37em;
-    left: 17.5em;
+    margin: 0 14em;
 
     button {
         color: #6495ed;
@@ -53,17 +52,37 @@
 
 @media only screen and (max-width: 768px) {
 
+    .about-page {
+        justify-content: center;
+    }
+
     .about-picture {
         width: 8em;
         height: 8em;
+        position: absolute;
+        top: -6em;
+        left: 1.25em;
+    }
+
+    .about-me {
+
+        position: absolute;
+        top: 35%;
 
         h2 {
             font-size: 2em;
-            margin: 0;
+            width: 95%;
         }
+
         p {
             font-size: 1em;
-            margin: 0;
+            width: 110%;
+            margin-bottom: 4em;
         }
+    }
+
+    .contactme-button {
+        position: absolute;
+        top: 18em;
     }
   }
