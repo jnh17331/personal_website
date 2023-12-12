@@ -1,0 +1,5 @@
+Flask==2.0.1
+Flask-CORS==3.0.10
+SQLAlchemy==1.4.26
+sqlite==python3
+pathlib==1.0.1
