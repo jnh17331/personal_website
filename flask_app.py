@@ -1,6 +1,5 @@
 import os
 import sqlite3
-from sqlalchemy import create_engine
 from pathlib import Path
 from flask import Flask, jsonify, request, render_template, send_from_directory
 from flask_cors import CORS, cross_origin
