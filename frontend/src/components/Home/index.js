@@ -3,12 +3,12 @@ import React, { useEffect, useState}  from 'react';
 import { Link } from 'react-router-dom';
 import ArrayDisplayer from '../ArrayDisplayer';
 import pfp from '../../assets/images/pfp.JPG';
-import ml_music from '../../assets/images/projects/ml_music.PNG';
-import pokedex from '../../assets/images/projects/pokedex.PNG';
-import movie_analysis from '../../assets/images/projects/movie_analysis.PNG';
-import eq_leaflet from '../../assets/images/projects/eq_leaflet.PNG';
-import mars_webscraping from '../../assets/images/projects/mars_webscraping.PNG';
-import website from '../../assets/images/projects/website_capture.PNG';
+import ml_music from '../../assets/images/projects/ml_music.png';
+import pokedex from '../../assets/images/projects/pokedex.png';
+import movie_analysis from '../../assets/images/projects/movie_analysis.png';
+import eq_leaflet from '../../assets/images/projects/eq_leaflet.png';
+import mars_webscraping from '../../assets/images/projects/mars_webscraping.png';
+import website from '../../assets/images/projects/website_capture.png';
 
 const Home = () => {
     const [projectlist, setProjects] = useState([]);
