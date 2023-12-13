@@ -7,7 +7,7 @@ const Blog = () => {
     useEffect(() => {
         const fetchData = async () => {
         try {
-            const response = await fetch('http://localhost:8000/api/blogs');
+            const response = await fetch('https://jesses-website-8e98c0911ba9.herokuapp.com/api/blogs');
             const data = await response.json();
 
             setProjects(data);
