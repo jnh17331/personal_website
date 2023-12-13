@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.82e79eeb.css",
+    "main.js": "/static/js/main.4d353e1f.js",
+    "static/js/787.bd5a8236.chunk.js": "/static/js/787.bd5a8236.chunk.js",
+    "static/media/pfp.JPG": "/static/media/pfp.32343eac659f403c7d00.JPG",
+    "static/media/website_capture.png": "/static/media/website_capture.921e554e025582d7ec13.png",
+    "static/media/eq_leaflet.png": "/static/media/eq_leaflet.fc3284907c4da078ef92.png",
+    "static/media/movie_analysis.png": "/static/media/movie_analysis.21d50a12b9efacb60ecf.png",
+    "static/media/pokedex.png": "/static/media/pokedex.cf11d00125714782933c.png",
+    "static/media/mars_webscraping.png": "/static/media/mars_webscraping.2923270f53288756dad4.png",
+    "static/media/ml_music.png": "/static/media/ml_music.7786e2b8b55b62c5e4f6.png",
+    "static/media/githublogo.png": "/static/media/githublogo.537c4bf9229039cf63da.png",
+    "static/media/instalogo.png": "/static/media/instalogo.2643d57fd6f7c05ecef9.png",
+    "static/media/linkedinlogo.png": "/static/media/linkedinlogo.dea410f45608402033d1.png",
+    "static/media/spotifylogo.png": "/static/media/spotifylogo.f31ff85b2dad5b4dbbba.png",
+    "index.html": "/index.html",
+    "main.82e79eeb.css.map": "/static/css/main.82e79eeb.css.map",
+    "main.4d353e1f.js.map": "/static/js/main.4d353e1f.js.map",
+    "787.bd5a8236.chunk.js.map": "/static/js/787.bd5a8236.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82e79eeb.css",
+    "static/js/main.4d353e1f.js"
+  ]
+}
