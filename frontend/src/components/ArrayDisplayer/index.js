@@ -16,8 +16,8 @@ const ArrayDisplayer = ({ items }) => {
 
   return (
     <div>
-      <div key={displayedItemIndex}>
-        <p>{currentDisplayedItem}</p>
+      <div>
+        <p key={displayedItemIndex}>{currentDisplayedItem}</p>
       </div>
     </div>
   );
