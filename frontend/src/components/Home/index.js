@@ -43,6 +43,8 @@ const Home = () => {
     const itemTitles = cubeprojects.map((project) => project.name);
     const itemsDescriptions = cubeprojects.map((project) => project.description);
 
+    console.log(itemTitles)
+
     return (
             <main className='page'>
                 <div id="stars-container">
