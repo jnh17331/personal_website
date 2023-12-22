@@ -13,7 +13,7 @@ html {
 .introduction {
   display: flex;
   position: absolute;
-  font-family: Geneva;
+  font-family: 'Flix', sans-serif;
   font-size: 6vw;
   color: #6495ed;
   margin: 2em 0.35em;
@@ -24,15 +24,15 @@ html {
     position: absolute;
     animation: block 3s ease-in forwards;
     display: block;
-    width: 6em;
-    font-size: 10vw;
+    width: 7em;
+    font-size: 9vw;
     top: -0.75em;
   }
   
   p {
     position: inherit;
     width: 11em;
-    top: .75em;
+    top: .70em;
   }
   
 }
@@ -58,6 +58,7 @@ z-index: auto;
   display: flex;
   flex-direction: column;
   margin: 0em 4em;
+  font-family: 'Verdana', sans-serif;
 }
 
 @keyframes block {
@@ -446,6 +447,7 @@ animation : animateStars 31.5s ease-in-out infinite;
     left: 5%;
     max-width: 70%;
     top: 120%;
+    font-family: 'Verdana', sans-serif;
   }
 
   .cube-container {

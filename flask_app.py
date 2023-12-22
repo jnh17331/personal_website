@@ -45,7 +45,8 @@ def projects():
         'name': row[1],
         'description': row[2],
         'skills':row[3],
-        'imageURL': f'/api/images/{row[4]}'
+        'imageURL': f'/api/images/{row[4]}',
+        'link': row[6]
         } for row in rows]
 
     conn.close()

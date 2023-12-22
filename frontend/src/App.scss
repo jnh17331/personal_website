@@ -1,4 +1,18 @@
 $primary-color: #6495ED;
 
+@font-face {
+    font-family: 'Flix';
+    src: local('Flix'), url('assets/fonts/flix.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+@font-face {
+  font-family: 'Verdana';
+  src: local('Verdana'), url('assets/fonts/verdana.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import 'animate.css';
 

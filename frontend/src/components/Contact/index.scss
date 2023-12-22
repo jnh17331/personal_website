@@ -13,12 +13,13 @@
     animation: fadeIn 1s 0.5s;
     animation-fill-mode: forwards;
     max-width: 50em;
+    font-family: 'Verdana', sans-serif;
 
     h1 {
         margin-left: 1em;
         padding: 1em;
         color: #6495ed;
-        font-size: 5em;
+        font-size: 4.5em;
         padding-bottom: 0;
     }
 
@@ -27,14 +28,14 @@
         padding-top: 0em;
         color: #c0c0c0;
         width: 100%;
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
     
 }
 
 .contact-form {
     width: 100%;
-    margin-top: 5em;
+    margin-top: 3.75em;
     margin-left: 0em;
     padding: 1em;
     padding-top: 0em;
