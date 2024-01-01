@@ -1,5 +1,7 @@
 # Jesse Heaton's Personal Website
 
+[www.jesse-heaton.com](https://www.jesse-heaton.com)
+
 ![website_snippet](https://github.com/jnh17331/personal_website/blob/main/frontend/src/assets/images/projects/website_capture.png)
 
 I created this website to showcase my projects that I have made and am going to make in the future. I also created this website to dive more into frontend development.
