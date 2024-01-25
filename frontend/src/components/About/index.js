@@ -16,11 +16,10 @@ const About = () => {
                     My name is Jesse,
                 </h2>
                 <p>
-                    I am a Data Scientist/Analyst and am currently located in Hanover, Pennsylvania. My journey in coding began in high school and was reignited in 2023, 
-                    culminating in the recent acquisition of my Data Science certificate through Rutgers Bootcamps. The programming languages I am most proficient in are Python, 
-                    Javascript, HTML, CSS, Git, and CLI. I am passionate about coding because it empowers me to make any idea come to life or make any aspect of life easier, which is a
-                    valuable creative outlet. Outside of coding I have my dog, Marshall, that I love taking on walks, hikes, or playing a game of tug of war with. I am also an 
-                    avid music fan with a love of many genres such as Hip-hop, Jazz, Rock, or Indie. 
+                As an aspiring Data Scientist/Analyst based in Hanover, Pennsylvania, my coding journey started in high school and was rekindled in 2023, leading to the recent acquisition of 
+                my Data Science certificate through Rutgers Bootcamps. I am proficient in languages such as Python, Javascript, HTML, CSS, Git, CLI, React, and more. My passion for coding 
+                stems from its ability to bring ideas to life and simplify various aspects of life which is a valuable creative outlet. Currently dedicated to crafting both visually appealing 
+                and functional software, programs, and systems.
                 </p>
             </div>
         </div>
