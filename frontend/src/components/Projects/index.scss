@@ -51,6 +51,10 @@
       left: 1em;
       width: 100vw;
 
+      h2 {
+      margin-left: calc(50vw - 3em);
+      }
+
       .card-container {
         margin-right: 2em;
         
