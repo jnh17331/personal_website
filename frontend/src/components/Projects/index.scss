@@ -48,6 +48,7 @@
 
     .projects-page {
 
+      left: 1em;
       width: 100vw;
 
       .card-container {
@@ -56,8 +57,7 @@
         .project-card{
 
           left: -0.5em;
-          min-height: 30em;
-          max-height: 25em;
+          max-height: 30em;
 
           .project-description {
             font-size: 0.75em;
