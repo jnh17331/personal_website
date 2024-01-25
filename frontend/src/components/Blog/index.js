@@ -23,13 +23,15 @@ const Blog = () => {
     <div className='blog-page'>
       <h2>Blog Timeline</h2>
       <div className='blog-container'>
-        {bloglist.map((blog) => ( 
-          <div key={blog.id} className='blog-card'>
-            <strong>{blog.blog_title}</strong><br /> 
-            <i>{blog.date}</i><br /><br />
-            <p className='project-description'>{blog.blog_message}</p> 
-          </div>
-        ))}
+        {bloglist
+          .sort((a, b) => new Date(b.date) - new Date(a.date))
+          .map((blog) => ( 
+            <div key={blog.id} className='blog-card'>
+              <strong>{blog.blog_title}</strong><br /> 
+              <i>{blog.date}</i><br /><br />
+              <p className='project-description'>{blog.blog_message}</p> 
+            </div>
+          ))}
       </div>
     </div>
   );

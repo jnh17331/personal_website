@@ -3,8 +3,8 @@ html {
 }
 
 .page {
-  height: 110vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   padding: 0;
   position: absolute;
   overflow: auto;    
@@ -421,7 +421,7 @@ animation : animateStars 31.5s ease-in-out infinite;
 
   .introduction {
     top: 70%;
-    left: 16%;
+    left: 14%;
 
     h1 {
       top: -3.5em;
