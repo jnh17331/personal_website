@@ -46,19 +46,23 @@
 
   @media only screen and (max-width: 768px) {
 
-    .card-container {
-      margin-right: 2em;
-      
-      .project-card{
+    .projects-page {
 
-        left: -0.5em;
-        min-height: 30em;
-        max-height: 25em;
+      width: 100vw;
 
-        .project-description {
-          font-size: 0.75em;
+      .card-container {
+        margin-right: 2em;
+        
+        .project-card{
+
+          left: -0.5em;
+          min-height: 30em;
+          max-height: 25em;
+
+          .project-description {
+            font-size: 0.75em;
+          }
         }
       }
-      
     }
   }
